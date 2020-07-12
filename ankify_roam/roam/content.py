@@ -652,7 +652,7 @@ class BlockRef(BlockContentItem):
         return "\(\([\w\d\-_]{9}\)\)"
 
     def get_referenced_block(self):
-        return self.roam_db.get(self.uid)
+        return self.roam_db.query_by_uid(self.uid)
 
 
 class Url(BlockContentItem):
